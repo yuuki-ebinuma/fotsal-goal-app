@@ -1,0 +1,56 @@
+.detail-table {
+  margin-bottom: 30px;
+  width: 40%;
+  margin: 0 auto;
+}
+
+.detail-item {
+  width: 20%;
+  background-color:#DDFFFF;
+  border: 1px solid #dedede;
+  font-size: 14px;
+  text-align: center;
+}
+
+.detail-value {
+  width: 80%;
+  padding: 20px;
+  border: 1px solid #dedede;
+  font-size: 16px;
+}
+.service-title{
+  font-size: 8vh;
+}
+.title_detail{
+  text-align: center;
+  padding-top: 30px;
+}
+
+.btn{
+  text-align: center;
+  background-color: #CEF9DC;
+  font-size: 20px;
+  color: black;
+  margin: 20px 0px;
+  padding: 2vh 2vw;
+}
+.delete_btn{
+  background-color: #CCCCCC;
+  text-align: center;
+  font-size: 20px;
+  color: black;
+  margin: 20px 0px;
+  padding: 2vh 2vw;
+}
+
+.entry_btn{
+  background-color: #FF0000;
+  text-align: center;
+  font-size: 20px;
+  color: white;
+  font-weight: bolder;
+  margin: 20px 0px;
+  padding: 2vh 2vw;
+  display: block;
+
+}

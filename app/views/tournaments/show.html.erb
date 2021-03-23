@@ -1,0 +1,49 @@
+  <div class="title-contents">
+    <h1 class="service-title">
+      フットサル大会参加者大募集
+    </h1>
+  </div>
+  <h2 class="title_detail">
+    フットサル大会情報詳細
+  </h2>
+
+    <table class="detail-table">
+      <tbody>
+        <tr>
+          <th class="detail-item">大会タイトル</th>
+          <td class="detail-value"><%= @tournament.event_title %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">大会日時</th>
+          <td class="detail-value"><%= @tournament.event_month.name %><%= @tournament.event_date.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">大会時間</th>
+          <td class="detail-value"><%= @tournament.event_time.name %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">大会内容説明</th>
+          <td class="detail-value"><%= @tournament.event_description %></td>
+        </tr>
+        <tr>
+          <th class="detail-item">大会参加料金</th>
+          <td class="detail-value"><%= @tournament.fee %>円</td>
+        </tr>
+        <tr>
+          <th class="detail-item">開催場所</th>
+          <td class="detail-value"><%= @tournament.event_address %></td>
+        </tr>
+      </tbody>
+    </table>
+
+    <% if operation_signed_in? %>
+      <% if current_operation.id == @tournament.operation.id %>
+        <%= link_to "大会情報 編集", edit_tournament_path(@tournament.id),method: :get, class:"btn" %>
+        <%= link_to "大会情報 削除",tournament_path(@tournament.id),method: :delete, class:"delete_btn" %>
+      <% end %>
+    <% end %>
+
+    <% if user_signed_in? %>
+      <%= link_to "大会に参加する", tournament_entrys_path(@tournament.id),class:"entry_btn" %>
+    <% end %>
+
