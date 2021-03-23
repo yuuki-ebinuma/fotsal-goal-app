@@ -3,6 +3,6 @@ Rails.application.routes.draw do
   devise_for :users
   root to: "tournaments#index"
   resources :tournaments do
-    resources :entrys, only:[:index,:create,:new]
+    resources :entries, only:[:index,:create,:new]
   end
 end

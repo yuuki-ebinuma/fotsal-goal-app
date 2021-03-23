@@ -5,7 +5,7 @@ class CreateEntries < ActiveRecord::Migration[6.0]
       t.integer :user_id,            null: false,foreign_key: true
       t.string  :team_name,          null: false
       t.string  :team_captain,       null: false
-      t.integer :phone,              null: false
+      t.string  :phone,              null: false
       t.timestamps
     end
   end

@@ -10,6 +10,11 @@ class EntriesController < ApplicationController
 
   def create
     @entry = Entry.new(entry_params)
+    if @entry.save!
+      redirect_to root_path
+    else
+      render :index
+    end
   end
 
   def new

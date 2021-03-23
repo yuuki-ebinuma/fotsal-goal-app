@@ -17,7 +17,7 @@ ActiveRecord::Schema.define(version: 2021_03_23_071232) do
     t.integer "user_id", null: false
     t.string "team_name", null: false
     t.string "team_captain", null: false
-    t.integer "phone", null: false
+    t.string "phone", null: false
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
