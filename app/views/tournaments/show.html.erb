@@ -33,6 +33,10 @@
           <th class="detail-item">開催場所</th>
           <td class="detail-value"><%= @tournament.event_address %></td>
         </tr>
+        <tr>
+          <th class="detail-item-size">現在参加チーム数</th>
+          <td class="detail-value"><%= @tournament.entries.length %>チーム</td>
+        </tr>
       </tbody>
     </table>
 
@@ -43,7 +47,12 @@
       <% end %>
     <% end %>
 
+
     <% if user_signed_in? %>
-      <%= link_to "大会に参加する", tournament_entries_path(@tournament.id),class:"entry_btn" %>
+      <div class='entry-btn'>
+        <%= link_to "大会に参加する", tournament_entries_path(@tournament.id),class:"entry_btn" %>
+      </div>
     <% end %>
+
+      <%=link_to 'もどる', root_path, class:"back" %>
 

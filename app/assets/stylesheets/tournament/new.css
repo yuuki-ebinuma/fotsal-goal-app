@@ -105,6 +105,12 @@
   background: #aaa;
   border: 1px solid #aaa;
   color: #fff;
-  padding: 15px 35%;
+  padding: 15px 20%;
   text-decoration: none;
+  display: flex;
+  justify-content:center ;
+}
+.sell-btn-contents {
+  width: 100%;
+  text-align: center;
 }

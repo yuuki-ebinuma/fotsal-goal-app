@@ -11,12 +11,20 @@
   font-size: 14px;
   text-align: center;
 }
+.detail-item-size{
+  width: 20%;
+  background-color:#DDFFFF;
+  border: 1px solid #dedede;
+  font-size: 12px;
+  text-align: center;
+}
 
 .detail-value {
   width: 80%;
   padding: 20px;
   border: 1px solid #dedede;
   font-size: 16px;
+  text-align: center;
 }
 .service-title{
   font-size: 8vh;
@@ -33,14 +41,26 @@
   color: black;
   margin: 20px 0px;
   padding: 2vh 2vw;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
+
 }
 .delete_btn{
   background-color: #CCCCCC;
   text-align: center;
   font-size: 20px;
   color: black;
-  margin: 20px 0px;
   padding: 2vh 2vw;
+  text-decoration: none;
+  display: flex;
+  justify-content: center;
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 20px;
 }
 
 .entry_btn{
@@ -49,8 +69,13 @@
   font-size: 20px;
   color: white;
   font-weight: bolder;
-  margin: 20px 0px;
   padding: 2vh 2vw;
   display: block;
-
+  text-decoration: none;
+  
+}
+.entry-btn {
+  width: 50%;
+  margin: 0 auto;
+  margin-top: 50px;
 }

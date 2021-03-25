@@ -2,7 +2,7 @@ class User < ApplicationRecord
   devise :database_authenticatable, :registerable,
   :recoverable, :rememberable, :validatable
 
-  has_many :entrys
+  has_many :entries
 
   with_options presence:true, format: {with: /\A[ぁ-んァ-ヶ一-龥々]+\z/} do
       validates :last_name

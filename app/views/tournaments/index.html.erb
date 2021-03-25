@@ -1,22 +1,19 @@
-<div class="main">
+
   <div class="title-contents">
     <h1 class="service-title">
       フットサル大会参加者大募集
     </h1>
   </div>
-</div>
 
-<div class="ope"></div>
-
+ 
     <div class="nav">
-      <ul class="lists-left">
-      <ul class="lists-right">
+      <div class="lists-left">
           <% if operation_signed_in? %>
-              <li><%= link_to current_operation.operation_name,class:"operation_name" %></li>
+              <li><%= link_to current_operation.operation_name,class:"operation_name" %>様</li>
               <li><%= link_to '運営ログアウト', destroy_operation_session_path, method: :delete, class: "logout" %></li>
               <li><%= link_to  '参加者を募集する', new_tournament_path, class: "operation_name" %></li>
             <% elsif user_signed_in? %>
-              <li><%= link_to current_user.name, class: "user-name" %></li>
+              <li><%= link_to current_user.name, class: "operation_name" %></li>
               <li><%= link_to "ログアウト", destroy_user_session_path, method: :delete, class: "logout" %></li>
             <% else %>
               <li><%= link_to "運営 ログイン",new_operation_session_path, class: "login" %></li>
@@ -24,16 +21,16 @@
               <li><%= link_to 'ユーザーログイン', new_user_session_path, class: "login" %></li>
               <li><%= link_to 'ユーザー新規登録', new_user_registration_path, class: "sign-up" %></li>
           <% end %>
-      </ul>
-      </ul>
+      </div>
     </div>
 
-  <div class= "tournament">
+    <div class="tournament-name">大会募集情報</div>
+
+  <ul class= "tournament">
     <% @tournament.each do |tournament| %>
-      <div class="tournaments">
-        <%= link_to tournament_path(tournament.id) do %>
+        <li><%= link_to tournament_path(tournament.id) do %></li>
           <%= tournament.event_title %>
-          <div class="tournamnet-contents">
+          <div class="tournament-contents">
               <%= tournament.event_month.name %>
               <%= tournament.event_date.name %>
               <%= tournament.event_time.name%>
@@ -42,10 +39,20 @@
               <span>募集数  <%= tournament.entry_participation.name%>
           </div>
           <span>料金 <%= tournament.fee%><span> 円
+
+          <div class="enrty-residue">
+          
+            <div class='entry-residue'>
+            <span>現在参加チーム数</span>
+              <%= tournament.entries.length %>チーム
+            </div>
+          </div>
         <% end %>
-      </div>
     <% end %>
-  </div>
+  </ul>
+
+  <footer class='second-fotter'>
+  </footer>
 
 
 

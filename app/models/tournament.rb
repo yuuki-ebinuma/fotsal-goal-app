@@ -6,7 +6,7 @@ class Tournament < ApplicationRecord
   belongs_to :event_time
 
   belongs_to :operation
-  #belongs_to :entry
+  has_many   :entries
 
   with_options presence:true do
     validates :event_title

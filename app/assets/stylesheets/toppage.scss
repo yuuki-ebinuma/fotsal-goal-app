@@ -1,24 +1,23 @@
 .title-contents {
-  width: 100vw;
+  width: 80%;
   display: flex;
   align-items: center;
   justify-content: center;
   color: gold;
   text-shadow: 0 0 5px rgba(0, 0, 0, 0.9);
+  background-image: image-url('images2.jpeg');
+  padding: 10vh 10vw;
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
-.main {
-  background: #f8f8f8;
-}
 
 .service-title {
-  font-size: 8vh;
+  font-size: 10vh;
 }
 
 .lists-left {
   display: flex;
-  min-width: 200px;
-  list-style: none;
   padding-left: 450px;
 }
 
@@ -44,57 +43,79 @@
 .operation_name {
   text-decoration: none;
   margin-right: 3vw;
-  color: #333333;
+  color: red;
   font-weight: bold;
+  text-decoration: none;
 }
 
 .nav {
   font-size: 18px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   width: 100%;
-  padding: 1vh 0;
+  padding: 3vh 0;
+  font-size: 20px;
+  margin: 30px;
+  text-decoration: none;
 }
 
-.lists-right {
+.lists-left {
   display: flex;
   list-style: none;
   align-items: flex-end;
   padding-right: 300px;
-}
-
-.user-name {
   text-decoration: none;
-  margin-right: 3vw;
-  color: #333333;
-  font-weight: bold;
 }
 
-.ope {
-  background: #eaf3ff;
-  border-bottom: solid 3px #516ab6;
-}
+
+
+
 
 .tournament {
-  background-color: #FFFFF0;
+  background-color:#FFFF66;
   height: calc(100vh - 100px);
-  padding: 0 20px;
+  padding: 20px 20px;
   display: flex;
   align-items: center;
   justify-content:space-around;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bold;
-
-}
-
-.tournaments {
-  padding: 20px 0 40px;
-  text-decoration: none;
-}
-.tournament_path{
   text-decoration: none;
 }
 
+.tournament-contents{
+  text-decoration: none;
+  line-height: 1.5; 
+  
+}
+
+ul, ol {
+  color: #668ad8; 
+  border: double 5px #668ad8;
+  background: #f1f8ff; 
+  padding: 0.5em 0.5em 0.5em 2em;
+  list-style: none;
+}
+
+ul li, ol li {
+  line-height: 1.5;
+  padding: 0.5em 0;
+}
+
+.tournament-name{
+  font-size: 40px;
+  text-align: center;
+  font-weight: bolder;
+  
+}
+
+.second-fotter {
+  width: 100%;
+  min-width: 800px;
+  height: 200px;
+  background-color:	#004400;
+  display: flex;
+  flex-direction: column;
+}
 
 

@@ -41,10 +41,19 @@
 
 .entry-red-btn {
   width: 100%;
-  background: #ea352d;
-  border: 1px solid #ea352d;
+  background: #FF0000;
+  border: 1px solid #FF0000;
   color: #fff;
   line-height: 48px;
-  font-size: 14px;
+  font-size: 25px;
   cursor: pointer;
+  font-weight: bold;
+}
+
+.back{
+  text-decoration: none;
+  color: #fff;
+  background-color: #eb6100;
+  border-radius: 100vh;
+  padding:15px;
 }
