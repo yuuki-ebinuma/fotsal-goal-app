@@ -28,8 +28,9 @@
 
   <ul class= "tournament">
     <% @tournament.each do |tournament| %>
-        <li><%= link_to tournament_path(tournament.id) do %></li>
+        <li><%= link_to tournament_path(tournament.id) ,class:"tournament-font" do %></li>
           <%= tournament.event_title %>
+
           <div class="tournament-contents">
               <%= tournament.event_month.name %>
               <%= tournament.event_date.name %>
@@ -39,14 +40,11 @@
               <span>募集数  <%= tournament.entry_participation.name%>
           </div>
           <span>料金 <%= tournament.fee%><span> 円
-
-          <div class="enrty-residue">
-          
             <div class='entry-residue'>
-            <span>現在参加チーム数</span>
+            <div class="num">只今のエントリー数</div>
               <%= tournament.entries.length %>チーム
             </div>
-          </div>
+
         <% end %>
     <% end %>
   </ul>

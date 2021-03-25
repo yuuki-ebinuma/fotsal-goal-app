@@ -22,6 +22,20 @@ class TournamentsController < ApplicationController
     @tournament = Tournament.find(params[:id])
   end
 
+  def edit
+  end
+
+  def update
+    
+  end
+
+  def destroy
+    @tournament = Tournament.find(params[:id])
+    @tournament.destroy
+    redirect_to root_path
+  end
+
+
   private
 
   def tournament_params
