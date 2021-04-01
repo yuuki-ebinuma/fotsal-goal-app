@@ -1,0 +1,81 @@
+<div class="items-sell-contents">
+  <div class="items-sell-main">
+    <h2 class="items-sell-title">大会の情報を入力</h2>
+    <%= form_with model: @tournament, local: true do |f| %>
+
+      <div class="new-items">
+      <div class="weight-bold-text">
+        大会 タイトル
+        <span class="indispensable">必須</span>
+      </div>
+      <%= f.text_area :event_title, class:"items-text", id:"#", placeholder:"大会名（必須 40文字まで)", maxlength:"40" %>
+
+      
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          大会の説明
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :event_description, class:"items-text", id:"#", placeholder:"大会の説明（レベル、女性ミックス、オーバー30、ルール、注意点など）例）オーバー30歳で男性女性混合チームでの大会です！暖かくなってきましたので皆さんで仲良くフットサルしませんか？" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+
+      
+
+      <div class="items-explain">
+        <div class="weight-bold-text">
+          大会開催場所・住所
+          <span class="indispensable">必須</span>
+        </div>
+        <%= f.text_area :event_address, class:"items-text", id:"#", placeholder:"開催場所 例)EBI フットサル場Aコート 〇〇市〇〇町1-1-1" ,rows:"7" ,maxlength:"1000" %>
+      </div>
+    
+      
+
+      <div class="items-detail">
+        <div class="weight-bold-text">大会日程</div>
+        <div class="form">
+          <div class="weight-bold-text">
+            大会日程/月
+            <span class="indispensable">必須</span>
+          </div>
+           <%= f.collection_select(:event_month_id, EventMonth.all, :id, :name, {prompt: "選択してください"}, {class:"select-box"}) %>
+          <div class="weight-bold-text">
+            大会日程/日
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:event_date_id, EventDate.all, :id, :name, {prompt: "選択してください"}, {class:"select-box"}) %>
+          <div class="weight-bold-text">
+            大会開始時間
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:event_time_id, EventTime.all, :id, :name, {prompt: "選択してください"}, {class:"select-box"}) %>
+          <div class="weight-bold-text">
+            参加チーム数
+            <span class="indispensable">必須</span>
+          </div>
+          <%= f.collection_select(:entry_participation_id, EntryParticipation.all, :id, :name, {prompt: "選択してください"}, {class:"select-box"}) %>
+        </div>
+      </div>
+
+      <div class="sell-price">
+        <div class="weight-bold-text question-text">
+          <span>大会 参加料金<br>(1チームあたりの料金)</span>
+        </div>
+        <div class="price-content">
+          <div class="price-text">
+            <span>価格</span>
+            <span class="indispensable">必須</span>
+          </div>
+          <span class="sell-yen">¥</span>
+          <%= f.text_field :fee, class:"price-input",  placeholder:"例）15000" %>
+        </div>
+      </div>
+
+      <div class="sell-btn-contents">
+        <%= f.submit "変更する" ,class:"sell-btn" %>
+        <%=link_to 'もどる', root_path, class:"back-btn" %>
+      </div>
+
+    <% end %>
+  </div>
+</div>
