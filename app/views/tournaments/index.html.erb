@@ -46,10 +46,14 @@
               <span>募集数  <%= tournament.entry_participation.name%>
           </div>
           <span>料金 <%= tournament.fee%><span> 円
-            <div class='entry-residue'>
+          <div class='entry-residue'>
             <div class="num">只今のエントリー数</div>
               <%= tournament.entries.length %>チーム
-            </div>
+          </div>
+
+          <span class = "team-show">
+            <%= link_to "現在のエントリーチーム情報",tournament_entry_path(tournament.id,entries.id) %>
+          </div>
 
         <% end %>
     <% end %>

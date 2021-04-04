@@ -22,6 +22,10 @@ class EntriesController < ApplicationController
     @entry = Entry.new
   end
 
+  def show
+    @entries = Entry.find(entry_params)
+  end
+
 
   
 
