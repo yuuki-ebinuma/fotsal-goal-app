@@ -59,3 +59,4 @@ gem 'pry-rails'
 gem 'active_hash'
 gem 'jquery-rails'
 gem 'ransack'
+gem 'rails_12factor', group: :production

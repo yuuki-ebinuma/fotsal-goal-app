@@ -25,6 +25,18 @@ ID:admin
 PASS:1111
 
 ## 利用方法
+・トップ画面では運営側、ユーザー側と２通りのログイン箇所があります。
+[![Image from Gyazo](https://i.gyazo.com/8ba7fd8606fe1f3bb35ac9cc5b965ae2.jpg)](https://gyazo.com/8ba7fd8606fe1f3bb35ac9cc5b965ae2)
+
+.運営側でログインした場合、トップ画面ではユーザー側ログインリンクが消え””参加者を募集する”というリンクを表示してます。
+[![Image from Gyazo](https://i.gyazo.com/ce2b1671f4f3a4d8c2185e37fc39d5d7.jpg)](https://gyazo.com/ce2b1671f4f3a4d8c2185e37fc39d5d7)
+
+・運営ログアウトを押すとログアウトします。
+
+・”参加者を募集する”を押すと募集したい大会の情報を投稿することができます。
+[![Image from Gyazo](https://i.gyazo.com/b28ec65ab4e851c4197e58d75f9bbbd6.gif)](https://gyazo.com/b28ec65ab4e851c4197e58d75f9bbbd6)
+
+
 
 
 
