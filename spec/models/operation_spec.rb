@@ -9,7 +9,6 @@ RSpec.describe Operation, type: :model do
     context "運営が登録できるとき" do
       it "全ての項目を入力できれば登録できる" do
         expect(@operation).to be_valid
-        binding.pry
       end
     end
 
